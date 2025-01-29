@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, rgb(2, 2, 56), purple);
+    color: white;
+}
+.main-heading {
+    margin: 5vh 1vw 3vh 1vw;
+    text-align: center;
+}
+
+.main-div {
+    font-size: 1.5vw;
+}
+
+.outer-div{
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 5vw;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-textbox{
+    width: 50vw;
+    height: 10vh;
+    font-size: 1.5vw;
+}
+
+.date-box{
+    padding: 1vh 2vw;
+    width: 11vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-selector{
+    width: 10vw;
+    height: 10vh;
+    font-size: 1.5vw;
+}
+
+.button-div{
+    padding: 1vh 2vw;
+}
+
+.add-button {
+    width: 10vw;
+    height: 10vh;
+    background-color: green;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.delete-button {
+    width: 10vw;
+    height: 7vh;
+    background-color: red;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.list-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item-div{
+    display: flex;
+    align-items: center;
+}
+
+.list-item-text-div{
+    width: 50vw;
+    height: 7vh;
+    padding: 1vh 2vw;
+}
+
+.todo-textbox-div,.placeholder-message{
+    width: 50vw;
+    height: 12vh;
+    padding: 1vh 2vw;
+}
