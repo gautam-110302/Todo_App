@@ -23,7 +23,7 @@ function addItem() {
     }
     todoTextArray.push(insideText);
     dateArray.push(selectedDate);
-    let listItemDiv = createListItem(insideText, selectedDate, todoTextArray.length - 1); // Pass the correct index
+    let listItemDiv = createListItem(insideText, selectedDate, todoTextArray.length - 1);
     listBox.appendChild(listItemDiv);
 
     storeTextArray(todoTextArray,dateArray);
@@ -36,14 +36,14 @@ function deleteItem(index) {
     todoTextArray.splice(index, 1);
     dateArray.splice(index,1);
     storeTextArray(todoTextArray,dateArray);
-    renderList(); // Re-render the list to reflect the updated array
+    renderList();
 }
 
 function renderList() {
-    listBox.innerHTML = ''; // Clear the list container before re-rendering
+    listBox.innerHTML = '';
 
     if (todoTextArray.length === 0) {
-        updatePlaceholderMessage(); // Update placeholder when the list is empty
+        updatePlaceholderMessage();
     } else {
         for (let i = 0; i < todoTextArray.length; i++) {
             let listItemDiv = createListItem(todoTextArray[i],dateArray[i], i);
@@ -74,9 +74,9 @@ function createListItem(text, selectedDate, index) {
     listItemDiv.appendChild(buttonDiv);
     buttonDiv.appendChild(deleteButton);
 
-    // Attach event listener to the delete button with the correct index
+    
     deleteButton.addEventListener('click', function() {
-        deleteItem(index); // Use the correct index for deletion
+        deleteItem(index);
     });
 
     return listItemDiv;
@@ -88,7 +88,7 @@ function storeTextArray(arr1,arr2) {
 }
 
 function updatePlaceholderMessage() {
-    // Check if there are no tasks and show the placeholder message
+    
     const placeholder = document.querySelector('.placeholder-message');
     
     if (todoTextArray.length === 0 && !placeholder) {
@@ -97,7 +97,6 @@ function updatePlaceholderMessage() {
         newPlaceholder.innerText = "No tasks yet";
         listBox.appendChild(newPlaceholder);
     } else if (todoTextArray.length > 0 && placeholder) {
-        // Remove the placeholder when there are tasks
         placeholder.remove();
     }
 }
